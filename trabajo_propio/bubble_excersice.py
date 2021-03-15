@@ -15,7 +15,15 @@ data = [go.Scatter(x=df['displacement'],
                         showscale=True
                     ))]
 
-layout = go.Layout(title='Scatter plot', hovermode='closest')
+layout = go.Layout(title='Scatter plot',
+                    hovermode='closest',
+                    xaxis={
+                            'title': 'Displacement',
+                            'color':'rgb(0,50,50)'
+                            },
+                    yaxis={
+                            'title':'Acceleration'
+                          })
 
 
 fig = go.Figure(data=data, layout=layout)

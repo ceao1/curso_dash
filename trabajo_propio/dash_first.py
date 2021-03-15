@@ -5,7 +5,8 @@ import dash_html_components as html
 app = dash.Dash()
 
 app.layout = html.Div(children=[
-                                html.H1('Hello Dash!', style={'textAlign':'center'}),
+                                html.H1('Hello Dash!', style={'textAlign':'center',
+                                                              'color':'rgb(200,0,0)'}),
                                 html.Div('Dash: Web dashboards using python'),
                                 dcc.Graph(id='example',
                                           figure={'data':[
