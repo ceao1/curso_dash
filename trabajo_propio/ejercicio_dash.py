@@ -12,6 +12,9 @@ datos = pd.read_csv('/home/carlos/Documentos/curso_dash/Data/OldFaithful.csv')
 
 app.layout = html.Div(children=[
                                 html.H1('Dashboard para ejercicio'),
+                                html.Br(),
+                                html.H2('Este es un header de segundo grado'),
+                                html.P(['linea 1', html.Br(),'linea 2']),
                                 dcc.Graph(id='primer_grafica',
                                           figure={'data':[
                                                             go.Scatter(name='Primero',
@@ -23,7 +26,6 @@ app.layout = html.Div(children=[
                                                                                }
                                                                       )
                                                          ],
-
                                                   'layout': go.Layout(title='Titulo del Dashboard',
                                                                       xaxis={'title':'Eje X',
                                                                             },
@@ -31,16 +33,9 @@ app.layout = html.Div(children=[
                                                                             },
                                                                      )
                                                  }
-
                                          )
-                                
-
                                 ]
                       )
-
-
-
-
 
 
 if __name__ == '__main__':
